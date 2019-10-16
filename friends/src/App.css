@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Calligraffitti|Great+Vibes&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 .Nav {
   display: flex;
   justify-content: space-between;
@@ -7,7 +6,7 @@
 }
 
 h1 {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 5px 50px;
   display: flex;
   align-items: center;
@@ -17,9 +16,9 @@ h1 {
 }
 
 h2{
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   font-size: 2.5rem;
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: white;
 }
 
@@ -31,7 +30,11 @@ h2{
   margin-right: 40px;
 }
 
-
+p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 .Container {
   display: flex;

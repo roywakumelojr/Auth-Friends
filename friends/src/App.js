@@ -4,7 +4,7 @@ import './App.css';
 
 import Login from './component/Login';
 import HomePage from './component/HomePage';
-import Dashboard from './component/Dashboard';
+import Dashboard from './component/FriendsList';
 import PrivateRoute from './component/PrivateRoute';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <div className="Nav">
         <h1>Friends List App</h1>
           <div className='Links'>
-            <Link className='NavLinks' to="/api/login">Login</Link>
+            <Link className='NavLinks' to="/api/login">Welcome</Link>
             <Link className='NavLinks' to="/protected">Friends List</Link>
           </div>
         </div>

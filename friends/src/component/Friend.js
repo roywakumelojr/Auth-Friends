@@ -2,13 +2,16 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 
-export default function Friend(props) {
+const Friend = ({ friend }) => {
+    const {name, age, email} = friend
 
     return (
         <Card 
-            header={props.name} 
-            meta={`Age: ${props.age}`} 
-            description={`Email: ${props.email}`}
+            header={name} 
+            meta={`Age: ${age}`} 
+            description={`Email: ${email}`}
         />
     )
 }
+
+export default Friend

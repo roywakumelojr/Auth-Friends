@@ -1,61 +1,35 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-import { Redirect } from 'react-router-dom';
 
-class Login extends React.Component {
-  state = {
-    credentials: {
-      username: '',
-      password: ''
-    }
-  };
+const Login = (props) => {
+    const [auth, setAuth] = useState({username:'', password:''});
 
-  handleChange = e => {
-    this.setState({
-      credentials: {
-        ...this.state.credentials,
-        [e.target.name]: e.target.value
-      }
-    });
-  };
+    const handleChanges = e => {
+        setAuth({
+            ...auth,
+            [e.target.name] : [e.target.value]
+        })
+    };
 
-  login = e => {
-    e.preventDefault();
-    axiosWithAuth()
-      .post('/api/login', this.state.credentials)
-      .then(res => {
-        localStorage.setItem('token', res.data.payload);
-        this.props.history.push('/protected');
-      })
-      .catch(err => console.log(err.response));
-  };
+    const onSubmit = e => {
+        axiosWithAuth()
+        .post('/api/login', auth)
+        .then(res => {
+            localStorage.setItem('token', res.data.payload);
+            props.history.push('/protected');
+        })
+        .catch(err => console.log('Check login information', err.response));
+    };
 
-  render() {
-    if (localStorage.getItem('token')) {
-      return <Redirect to="protected" />;
-    }
     return (
-      <div>
-        <form onSubmit={this.login}>
-          <input
-            type="text"
-            name="username"
-            placeholder="Enter Username"
-            value={this.state.credentials.username}
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            value={this.state.credentials.password}
-            onChange={this.handleChange}
-          />
-          <button>Log in</button>
-        </form>
-      </div>
-    );
-  }
-}
+        <div>
+            <form onSubmit={onSubmit}>
+                <input type='text' name='username' placeholder='Enter Username...' value={auth.username} onChange={handleChanges} />
+                <input type='text' name='password' placeholder='Enter Password...' value={auth.password} onChange={handleChanges} />
+                <button>Login</button> 
+            </form>
+        </div>
+    )
+}   
 
 export default Login;
