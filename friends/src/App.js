@@ -22,7 +22,6 @@ function App() {
           <PrivateRoute path="/protected" component={Dashboard} />
           <Route path="/" component={HomePage} />
           <Route path="/login" component={Login} />
-          <Route component={Login} />
         </Switch>
       </div>
     </Router>

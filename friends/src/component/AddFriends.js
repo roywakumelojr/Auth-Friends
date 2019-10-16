@@ -24,7 +24,7 @@ const AddFriends = () => {
                     })
                 })
             })
-        .catch(err => console.log('There was as error add', err.response))
+        .catch(err => console.log('There was as error add', err.res))
     };
 
     return (
