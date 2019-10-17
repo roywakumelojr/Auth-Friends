@@ -64,3 +64,39 @@ p {
   color: white;
   font-size: 1.3rem;
 }
+
+.FriendsCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+input {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+button {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: 600ms;
+  opacity: 0.8;
+  color: chocolate;
+  border-color: chocolate;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: chocolate;
+  cursor: pointer;
+  border-color: white;
+}

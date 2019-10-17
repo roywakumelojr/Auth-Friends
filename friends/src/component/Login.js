@@ -1,6 +1,5 @@
 import React, { useState }from 'react';
 import axios from 'axios'
-// import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 const Login = (props) => {
     const [auth, setAuth] = useState({username:'', password:''});
@@ -28,7 +27,7 @@ const Login = (props) => {
             <form onSubmit={onSubmit}>
                 <input type='text' name='username' placeholder='Enter Username...' value={auth.username} onChange={handleChanges} />
                 <input type='password' name='password' placeholder='Enter Password...' value={auth.password} onChange={handleChanges} />
-                <button>Login</button> 
+                <button type='submit'>Login</button> 
             </form>
         </div>
     )

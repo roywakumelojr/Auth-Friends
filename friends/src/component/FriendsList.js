@@ -33,9 +33,11 @@ export default function FriendsList () {
         <div>
             <FriendsTitle>Your Friends List </FriendsTitle>
             <AddFriends />
-            {friends.map(friend => (
-                <Friend key={friend.id} friend={friend} />
+            <div className='FriendsCard'>
+            {friends.map(friend => ( 
+                <Friend key={friend.id} friend={friend} /> 
             ))}
+            </div>
         </div>
     )
 }
