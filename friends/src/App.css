@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: chocolate;
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 5px 50px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+h2{
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+.Links {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  align-items: center;
+  margin-right: 40px;
+}
+
+p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1541411438265-4cb4687110f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80');
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.NavLinks {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.FriendsCard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+input {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+button {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+  transition: 600ms;
+  opacity: 0.8;
+  color: chocolate;
+  border-color: chocolate;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: chocolate;
+  cursor: pointer;
+  border-color: white;
+}
